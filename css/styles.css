@@ -1,5 +1,6 @@
 html,body{
 height:100%;
+width: 100%;
 margin:0;
 }
 .principal{
@@ -8,7 +9,7 @@ margin:0;
     display:flex;
 }
 .secondary{
-    width: 90%;
+    width: 95%;
     margin: 5% auto 0 auto;
     background-color: #FFF8FE;
     border: solid 2px #FFC3F6;
@@ -34,6 +35,7 @@ h3{
 }
 .navbar{
     background-color: #FFF8FE;
+    padding: 1em;
 }
 .list-header{
     width: 100%;
@@ -43,4 +45,7 @@ h3{
 .right{
     width: 50%;
     margin: 0 0 0 auto;
+}
+.container-fluid{
+    padding: 0%;
 }
