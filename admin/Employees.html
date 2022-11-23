@@ -48,8 +48,55 @@
         </header>
         <div class="secondary">
             <div class="row list-header" style="display: flex;">
-                <div class="input-group" style="background-color: blue;">
-                    <button class="btn btn-success">Nuevo</button>
+                <div class="input-group">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newEmployee">Nuevo</button>
+                </div>
+                <div class="modal fade" id="newEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Empleado</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="#">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre Completo</span>
+                            <input type="text" class="form-control" aria-label="Server">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Telefóno</span>
+                            <input type="text" class="form-control" aria-label="Server">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Edad</span>
+                            <input type="number" class="form-control" aria-label="Server">
+                            <span class="input-group-text">Sexo</span>
+                            <select name="gender" class="form-control" id="gender">
+                              <option value="h" class="form-control">H</option>
+                              <option value="m" class="form-control">M</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre de usuario</span>
+                            <input type="text" class="form-control" aria-label="Server">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Contraseña</span>
+                            <input type="password" class="form-control" aria-label="Server">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Confirmar contraseña</span>
+                            <input type="password" class="form-control" aria-label="Server">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Aceptar</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
                 <table class="table table-striped orders-table">
@@ -67,7 +114,6 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>1</th>
                             <td colspan="1"><img src="../src/img/user.png" class="img-thumbnail" style="width:5em;"></td>
                             <td>
                                 <input type="text" class="form-control" name="name" value="Antonio Carrillo Fuentes">
@@ -80,12 +126,15 @@
                             <td><input type="text" class="form-control" name="phone" value="7774993203"></td>
                             <td>
                                 <select name="gender" class="form-control">
-                                    <option value="h">Hombre</option>
-                                    <option value="m">Mujer</option>
+                                    <option value="h">H</option>
+                                    <option value="m">M</option>
                                 </select>
                             </td>
                             <td>
-                                <button class="btn btn-primary">Actualizar</button>
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary me-md-2" type="button">Actualizar</button>
+                                <button class="btn btn-danger" type="button">Desactivar</button>
+                              </div>
                             </td>
                         </tr>
                     </tbody>
