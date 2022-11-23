@@ -60,11 +60,32 @@
                         </div>
                         <div class="modal-body">
                           <form action="#">
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Nombre</span>
+                              <input type="text" class="form-control" aria-label="Server">
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Telefóno</span>
+                              <input type="text" class="form-control" aria-label="Server">
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Dirección</span>
+                              <input type="number" class="form-control" aria-label="Server">
+                              <span class="input-group-text">Tipo</span>
+                              <select name="gender" class="form-control" id="gender">
+                                <option value="h" class="form-control">Escuela</option>
+                                <option value="m" class="form-control">Taller</option>
+                              </select>
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text">Saldo</span>
+                              <input type="number" class="form-control" aria-label="Server">
+                            </div>
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                          <button type="button" class="btn btn-primary">Guardar cambios</button>
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary">Aceptar</button>
                         </div>
                       </div>
                     </div>
@@ -75,7 +96,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Teléfono</th>
-                    <th scope="col">Dirección</th>
+                    <th scope="col" colspan="3">Dirección</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Saldo</th>
                     <th scope="col"></th>
@@ -83,34 +104,15 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Pedro</td>
-                        <td>7774991587</td>
-                        <td>Avenida insurgentes #3 col centro Otzolotepec</td>
-                        <td>Taller</td>
-                        <td>2000</td>
-                        <td style="text-align:right">
-                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#updateCustomer">
-                                <i class="fa-solid fa-circle-info"></i>
-                              </button>
-                              <div class="modal fade" id="updateCustomer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Cliente: Pedro</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <form action="#">
-                                      </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                      <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </td>
+                        <td><input type="text" class="form-control" name="name" value="Pedro"></td>
+                        <td><input type="text" class="form-control" name="phone" value="7774991587"></td>
+                        <td colspan="3"><input type="text" class="form-control" name="address" value="Avenida insurgentes #3 col centro Otzolotepec"></td>
+                        <td><select name="type" class="form-control">
+                          <option value="escuela">Escuela</option>
+                          <option value="taller">Taller</option>
+                      </select></td>
+                        <td><input type="number" class="form-control" name="balance" value="2000"></td>
+                        <td><button class="btn btn-primary">Actualizar</button></td>
                       </tr>
                 </tbody>
             </table>
